@@ -5,4 +5,4 @@ Goals:
 -----------------------------------------------
 Create a Login form
 
-Display a list and or map of projects on campus
+Display a list and/or map of projects on campus
