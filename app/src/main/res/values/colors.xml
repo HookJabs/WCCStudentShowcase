@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="WCCRed">#681421</color>
+    <!--Experimented with a darker navBar!-->
+    <color name="WCCRedDark">#5a0d17</color>
 </resources>
