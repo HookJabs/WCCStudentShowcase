@@ -27,7 +27,7 @@
             android:layout_height="40dp"
             android:background="@android:color/background_light"
             android:ems="10"
-            android:hint="JDoe0000@student.whatcom.edu"
+            android:hint="Access Code Here"
             android:inputType="textEmailAddress"
             android:padding="10dp"
             android:singleLine="true"
