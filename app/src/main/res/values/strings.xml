@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">WCCStudentShowcase</string>
+    <string name="time_1">12:00</string>
+    <string name="time_2">1:00</string>
+    <string name="proj_1">Albus\'s Project in Syre 225</string>
+    <string name="proj_2">Hermoine\'s Project in Syre 114</string>
+    <string name="proj_3">Harry\'s Project in Cascade 112</string>
 </resources>
