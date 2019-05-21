@@ -1,5 +1,6 @@
 package com.example.wccstudentshowcase;
 
+import android.graphics.drawable.Drawable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,13 +9,15 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView mapDisplay;
+    private Drawable syref1;
     private boolean isListView = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        mapDisplay = findViewById();
+        mapDisplay = findViewById(R.id.mapDisplay);
+        //mapDisplay.
     }
 
     //when the sign in button is pressed
@@ -25,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onClickBuilding(View v) {
         //TODO : read the id of the button pressed to tell what building should be shown
-
+        mapDisplay.setImageDrawable(getDrawable(R.drawable.syref1));
     }
 
     public void onToggleView(View v) {
