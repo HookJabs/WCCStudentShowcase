@@ -45,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+
+    /*
+    TODO: have a toggleable passcode file
+
+     */
     public void onToggleView(View v) {
         //flip the state between list and map view
         isListView = !isListView;
