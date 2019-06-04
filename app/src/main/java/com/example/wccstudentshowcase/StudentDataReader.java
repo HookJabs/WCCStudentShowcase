@@ -33,5 +33,6 @@ public class StudentDataReader {
         for(String[] s : projects) {
             titles.add(s[0]);
         }
+        return titles;
     }
 }
