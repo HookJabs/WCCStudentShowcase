@@ -68,15 +68,14 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         switch(v.getId())
         {
             case R.id.heiner:
-                Log.w("stuff", "heiner");
                 break;
             case R.id.cascade:
-                Log.w("stuff", "cascade");
                 break;
             case R.id.syre:
-                Log.w("stuff", "syre");
                 break;
         }
+        String s = v.getId()  + "";
+        Log.d("stuff", s);
     }
 
     public void onToggleView(View v) {
