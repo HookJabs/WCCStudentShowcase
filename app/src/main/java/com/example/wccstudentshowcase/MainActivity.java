@@ -1,14 +1,17 @@
 package com.example.wccstudentshowcase;
 
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -26,29 +29,29 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listview);
         mapDisplay = findViewById(R.id.mapDisplay);
-        try {
-            sdr = new StudentDataReader("Data1.txt");
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+        sdr = new StudentDataReader();
         recyclerViewStuff();
         //mapDisplay.
     }
     public void recyclerViewStuff() {
 
-        System.out.println(sdr.getTitles());
+        //System.out.println(sdr.getTitles());
         // data to populate the RecyclerView with
-        ArrayList<String> animalNames = sdr.getTitles();
-        animalNames.add("Horse");
-        animalNames.add("Cow");
-        animalNames.add("Camel");
-        animalNames.add("Sheep");
-        animalNames.add("Goat");
+        ArrayList<String> titles = new ArrayList<>();
+        String[] titleArray = sdr.getTitles();
+        for(String s : titleArray) {
+            titles.add(s);
+        }
+//        titles.add("Horse");
+//        titles.add("Cow");
+//        titles.add("Camel");
+//        titles.add("Sheep");
+//        titles.add("Goat");
 
         // set up the RecyclerView
         RecyclerView recyclerView = findViewById(R.id.rvAnimals);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MyRecyclerViewAdapter(this, animalNames);
+        adapter = new MyRecyclerViewAdapter(this, titles);
         adapter.setClickListener(this);
         recyclerView.setAdapter(adapter);
     }

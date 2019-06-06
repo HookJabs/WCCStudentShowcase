@@ -1,44 +1,42 @@
 package com.example.wccstudentshowcase;
 
-import android.support.v7.app.AppCompatActivity;
+//import androidx.appcompat.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class StudentDataReader extends AppCompatActivity {
     //private Scanner s;
     private File studentData;
-    private ArrayList<String[]> projects;
+    private String[] allData;
+    private String[] titles;
 
 
-    public StudentDataReader(String fileName) throws FileNotFoundException {
-        projects = new ArrayList<>();
+    public StudentDataReader() {
+
         String s = getString(R.string.StudentData);
         //studentData = new File(getFilesDir(), fileName);
         //s = new Scanner(studentData);
-        String[] strings = s.split("§");
+        allData = s.split("§");
         //grab every fifth or whatever for title, etc.
-        //be sure to get the kindle working
-        while(s.hasNextLine()) {
-            String currentLine = s.nextLine();
-            if(currentLine.contains("§")) {
-                projects.add(currentLine.split("§"));
-            }
+        titles = new String[allData.length/5];
+        int j  = 0;
+        for (int i = 0; i < allData.length; i+=5) {
+            titles[j] = allData[i];
+            j++;
         }
+
 
     }
 
-    public ArrayList<String[]> getAllData() {
-        return  projects;
+    public String[] getAllData() {
+        return allData;
     }
 
-    public ArrayList<String> getTitles(){
-        ArrayList<String> titles = new ArrayList<>();
-        for(String[] s : projects) {
-            titles.add(s[0]);
-        }
+    public String[] getTitles(){
         return titles;
     }
 }
