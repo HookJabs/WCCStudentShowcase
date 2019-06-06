@@ -1,20 +1,26 @@
 package com.example.wccstudentshowcase;
 
+import android.support.v7.app.AppCompatActivity;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class StudentDataReader {
-    private Scanner s;
+public class StudentDataReader extends AppCompatActivity {
+    //private Scanner s;
     private File studentData;
     private ArrayList<String[]> projects;
 
 
     public StudentDataReader(String fileName) throws FileNotFoundException {
         projects = new ArrayList<>();
-        studentData = new File(fileName);
-        s = new Scanner(studentData);
+        String s = getString(R.string.StudentData);
+        //studentData = new File(getFilesDir(), fileName);
+        //s = new Scanner(studentData);
+        String[] strings = s.split("§");
+        //grab every fifth or whatever for title, etc.
+        //be sure to get the kindle working
         while(s.hasNextLine()) {
             String currentLine = s.nextLine();
             if(currentLine.contains("§")) {
