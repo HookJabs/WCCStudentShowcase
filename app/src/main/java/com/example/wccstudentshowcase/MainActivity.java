@@ -1,11 +1,14 @@
 package com.example.wccstudentshowcase;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
-import android.support.v7.app.AppCompatActivity;
+//import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,15 +20,20 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+       // setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_listview2);
         mapDisplay = findViewById(R.id.mapDisplay);
+
+        Intent viewCurrent = new Intent(this, ViewList.class);
+        startActivity(viewCurrent);
+
         //mapDisplay.
     }
 
     //when the sign in button is pressed
     public void onSignIn(View v) {
         //TODO: Check if code is valid
-        setContentView(R.layout.activity_listview);
+        setContentView(R.layout.activity_listview2);
     }
 
     public void onClickBuilding(View v) {
