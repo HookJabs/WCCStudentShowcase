@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
     private ImageView mapDisplay;
     private Drawable syref1;
     private boolean isListView = true;
-    private MyRecyclerViewAdapter adapter;
+//    private MyRecyclerViewAdapter adapter;
     private StudentDataReader sdr;
 
     @Override
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         setContentView(R.layout.activity_listview);
         mapDisplay = findViewById(R.id.mapDisplay);
         sdr = new StudentDataReader();
-        recyclerViewStuff();
+//        recyclerViewStuff();
         //mapDisplay.
     }
     public void recyclerViewStuff() {
@@ -37,27 +37,22 @@ public class MainActivity extends AppCompatActivity implements MyRecyclerViewAda
         //System.out.println(sdr.getTitles());
         // data to populate the RecyclerView with
         ArrayList<String> titles = new ArrayList<>();
-        String[] titleArray = sdr.getTitles();
-        for(String s : titleArray) {
-            titles.add(s);
-        }
-//        titles.add("Horse");
-//        titles.add("Cow");
-//        titles.add("Camel");
-//        titles.add("Sheep");
-//        titles.add("Goat");
+//        String[] titleArray = sdr.getTitles();
+//        for(String s : titleArray) {
+//            titles.add(s);
+//        }
 
         // set up the RecyclerView
-        RecyclerView recyclerView = findViewById(R.id.rvAnimals);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        adapter = new MyRecyclerViewAdapter(this, titles);
-        adapter.setClickListener(this);
-        recyclerView.setAdapter(adapter);
+//        RecyclerView recyclerView = findViewById(R.id.rvAnimals);
+//        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        adapter = new MyRecyclerViewAdapter(this, titles);
+//        adapter.setClickListener(this);
+//        recyclerView.setAdapter(adapter);
     }
 
     @Override
     public void onItemClick(View view, int position) {
-        Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(this, "You clicked " + adapter.getItem(position) + " on row number " + position, Toast.LENGTH_SHORT).show();
     }
 
 

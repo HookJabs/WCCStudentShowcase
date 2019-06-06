@@ -12,14 +12,15 @@ import java.util.ArrayList;
 
 public class StudentDataReader extends AppCompatActivity {
     //private Scanner s;
-    private File studentData;
+//    private File studentData;
+    private String s = getString(R.string.StudentData);
     private String[] allData;
     private String[] titles;
 
 
     public StudentDataReader() {
 
-        String s = getString(R.string.StudentData);
+       // String s = getString(R.string.StudentData);
         //studentData = new File(getFilesDir(), fileName);
         //s = new Scanner(studentData);
         allData = s.split("§");

@@ -14,6 +14,7 @@ import java.util.List;
 
 public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.ViewHolder> {
 
+
     private List<String> mData;
     private LayoutInflater mInflater;
     private ItemClickListener mClickListener;
